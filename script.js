@@ -7,8 +7,13 @@ body.appendChild(h3)
 function lineBreak(){
     return document.createElement('br')
 };
-
-
+//BOM implementation:
+let confirm = window.confirm("Hi there! Are you ready?")
+if (confirm) {
+    alert("Great! Prepare to smile!");
+} else {
+    alert("Take your time friend.");// if statement on the buttons for a extra alert.
+}
 
 
 
@@ -158,7 +163,7 @@ body.appendChild(coolButton)
 })
 
 
-
+// story:
 function makeStory(name, place, color, food ){ // make a function to display the story after input is collected 
 let fragment = document.createDocumentFragment();
 let story = document.createElement("p")
@@ -173,28 +178,14 @@ body.appendChild(fragment)
 }
 
 
-//alert(" just wanted to tell you first that YOU ARE AMAZING! enjoy :D")  ADD THIS BACK IN AT THE END 
+
 
 console.log(nameInput.value);
 
 
-//FORM IS CURRENTLY APPENDED TO BODY AT LINE 105 
-//BUTTON AT THE BOTTOM OF THE PAGE :
-//FIX THE COOL BUTTON. IDK WHAT I DID BUT IT ONLY CHANGES TWICE INSTEAD OF MORE   FIXED 
+
 //maybe add image too 
-
 // i want to iterate through the labels and style them for meeting requirement ...
-//HOW TO IMPLEMENT BOM
-//write the read me
-
-
 // maybe add a heart image at the bottom of the page...
 //add some styling
-
-
-// STARRED: look into bom and how to implement it here
-//LOOK INTO HOW TO USE AMD MAKE A DOCUMENT FRAGMENT  done
-
-
 // change button border colors to match palette...
-// make a mini form at the bottom of the html and use html validation 
