@@ -4,10 +4,12 @@ let h3 = document.createElement("h3")
 let paragraph = document.createElement("p");
 body.appendChild(h1);
 body.appendChild(h3)
-body.appendChild(paragraph);
 function lineBreak(){
     return document.createElement('br')
 };
+
+
+
 
 
 h1.textContent = "You Deserve the Best!";
@@ -95,14 +97,22 @@ button.addEventListener("click", function(event){
 //event.preventDefault(); // DONT PUT THIS ON THE BUTTON PUT IT ON THE FORM ITSELF 
 button.style.backgroundColor= "#ffd6a5"
 button.style.border = "3px, solid, yellow"
-alert("checking submission" )
+alert("checking submission, darling one sec..." )
 
 })
 
 // needs a function to prevent default ON THE FORM  done 
 // add an alert  for fun    done
 form.appendChild(button);
-body.appendChild(form);
+let topForm = document.createElement("div")
+topForm.appendChild(h1)
+topForm.appendChild(h3)// need to go on top of the form 
+topForm.appendChild(paragraph);
+topForm.appendChild(form);
+
+body.appendChild(topForm);
+
+
 
 form.addEventListener("submit", function(event){
     event.preventDefault()
@@ -122,7 +132,7 @@ coolButton.style.backgroundColor= "#cdb4db"
 coolButton.style.border = "3px, solid, yellow"
 coolButton.addEventListener("click", ()=> {
 if (coolButton.textContent === "click me!"){
-    coolButton.textContent = "I did it!"
+    coolButton.textContent = "I am the BEST!"
     coolButton.style.backgroundColor= "#a2d2ff"
     coolButton.style.border = "3px, solid, blue"
 } else if ( coolButton.textContent === "I am the BEST!" ){
@@ -163,16 +173,16 @@ body.appendChild(fragment)
 }
 
 
-alert(" just wanted to tell you first that YOU ARE AMAZING! enjoy :D")
+//alert(" just wanted to tell you first that YOU ARE AMAZING! enjoy :D")  ADD THIS BACK IN AT THE END 
 
 console.log(nameInput.value);
 
 
-
+//FORM IS CURRENTLY APPENDED TO BODY AT LINE 105 
 //BUTTON AT THE BOTTOM OF THE PAGE :
-//FIX THE COOL BUTTON. IDK WHAT I DID BUT IT ONLY CHANGES TWICE INSTEAD OF MORE 
+//FIX THE COOL BUTTON. IDK WHAT I DID BUT IT ONLY CHANGES TWICE INSTEAD OF MORE   FIXED 
 //maybe add image too 
-// see about clone node if needed 
+
 // i want to iterate through the labels and style them for meeting requirement ...
 //HOW TO IMPLEMENT BOM
 //write the read me
