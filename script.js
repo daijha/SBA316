@@ -12,7 +12,7 @@ let confirm = window.confirm("Hi there! Are you ready?"); // learned on the amaz
 if (confirm) {
   alert("Great! Prepare to smile!");
 } else {
-  alert("Take your time friend."); // if statement on the buttons for a extra alert.
+  alert("Take your time friend."); // if statement on the buttons for a extra "alert box".
 }
 
 h1.textContent = "You Deserve the Best!";
@@ -95,10 +95,14 @@ button.textContent = "Submit";
 button.setAttribute("type", "submit");
 button.addEventListener("click", function (event) {
   //event.preventDefault(); // DONT PUT THIS ON THE BUTTON PUT IT ON THE FORM ITSELF
-  button.style.backgroundColor = "#ffd6a5";
+  button.style.backgroundColor = "#453750";
   button.style.border = "3px solid yellow";
   alert("checking submission. Darling one sec...");
-});
+ 
+  setTimeout(()=>{
+  button.disabled = true // learned off of the glorius internet. disables the button after one use 
+  }, 60000); // learned about setTimeout today and it looks like i needed it to stop the button from repeating and let the story upload. still VERY new to me. copied syntax online. you have 1 min after messing up the form to input a answer 
+  });
 
 form.appendChild(button);
 let topForm = document.createElement("div");
@@ -145,9 +149,11 @@ form.addEventListener("submit", function (event) {
       coolButton.style.backgroundColor = "#cdb4db";
       coolButton.style.border = "3px, solid, yellow";
     }
+
   });
 
   body.appendChild(coolButton);
+
 });
 
 // story:
@@ -170,14 +176,16 @@ console.log(labels);// checking that i got all labels...
 
 labels.forEach(function(label){
  label.style.fontWeight ="bold"
+ label.style.textDecoration = "underline";
+ label.style.textDecorationThickness = "2px"
+ label.style.textDecorationColor = "#73648a"
+
 })
 
+body.style.fontFamily ="consolas"
 
 
 
-//the story should only generate once after submit is clicked . need to fix 
-//maybe add image too
-// i want to iterate through the labels and style them for meeting requirement ... ADD MORE STYLING 
-// maybe add a heart image at the bottom of the page...
-//add some styling
-// change button border colors to match palette...
+//center everything somehow 
+//check requirements
+//see about sentering cool button ( may cause issues ) 
