@@ -7,7 +7,7 @@ body.appendChild(h3);
 function lineBreak() {
   return document.createElement("br");
 }
-//BOM implementation:
+//BOM implementation:  
 let confirm = window.confirm("Hi there! Are you ready?"); // learned on the amazing internet :D
 if (confirm) {
   alert("Great! Prepare to smile!");
@@ -97,13 +97,13 @@ button.addEventListener("click", function (event) {
   //event.preventDefault(); // DONT PUT THIS ON THE BUTTON PUT IT ON THE FORM ITSELF
   button.style.backgroundColor = "#453750";
   button.style.border = "3px solid  pink";
- 
+
   alert("checking submission. Darling one sec...");
- 
-  setTimeout(()=>{
-  button.disabled = true // learned off of the glorius internet. disables the button after one use 
-  }, 60000); // learned about setTimeout today and it looks like i needed it to stop the button from repeating and let the story upload. still VERY new to me. copied syntax online. you have 1 min after messing up the form to input a answer 
-  });
+
+  setTimeout(() => {
+    button.disabled = true; // learned off of the glorius internet. disables the button after one use
+  }, 60000); // learned about setTimeout today and it looks like i needed it to stop the button from repeating and let the story upload. still VERY new to me. copied syntax online. you have 1 min after messing up the form to input a answer
+});
 
 form.appendChild(button);
 let topForm = document.createElement("div");
@@ -150,11 +150,9 @@ form.addEventListener("submit", function (event) {
       coolButton.style.backgroundColor = "#cdb4db";
       coolButton.style.border = "3px, solid, yellow";
     }
-
   });
 
   body.appendChild(coolButton);
-
 });
 
 // story:
@@ -163,7 +161,7 @@ function makeStory(name, place, color, food) {
   let fragment = document.createDocumentFragment();
   let story = document.createElement("p");
   story.setAttribute("id", "finishedStory"); //should give the story a id
-  story.textContent = `${name}, you are the BEST! Has anyone ever told you that? no?... that's crazy! ${name}, you are so special, you deserve 1 million servings of ${food}, on a ${color} plate, with a ${color} colored drink and straw, in your favorite ${color} outfit, while on a vacation in ${place}! I know you love going there! Thank you so much for working hard and bringing your best everyday, you are APPRECIATED ${name}, and you are LOVED! You deserve all the great ${color} things in the world! ( feeling down? Eat more ${food} ${name}! You'll be back on your feet in no time!)`; 
+  story.textContent = `${name}, you are the BEST! Has anyone ever told you that? no?... that's crazy! ${name}, you are so special, you deserve 1 million servings of ${food}, on a ${color} plate, with a ${color} colored drink and straw, in your favorite ${color} outfit, while on a vacation in ${place}! I know you love going there! Thank you so much for working hard and bringing your best everyday, you are APPRECIATED ${name}, and you are LOVED! You deserve all the great ${color} things in the world! ( feeling down? Eat more ${food} ${name}! You'll be back on your feet in no time!)`;
 
   fragment.appendChild(story);
   body.appendChild(fragment);
@@ -173,23 +171,25 @@ console.log(nameInput.value);
 
 //ITERATION
 let labels = document.querySelectorAll("label");
-console.log(labels);// checking that i got all labels...
+console.log(labels); // checking that i got all labels...
 
-labels.forEach(function(label){
- label.style.fontWeight ="bold"
- label.style.textDecoration = "underline";
- label.style.textDecorationThickness = "2px"
- label.style.textDecorationColor = "#73648a"
+labels.forEach(function (label) {
+  label.style.fontWeight = "bold";
+  label.style.textDecoration = "underline";
+  label.style.textDecorationThickness = "2px";
+  label.style.textDecorationColor = "#73648a";
+});
 
-})
+body.style.fontFamily = "consolas";
+form.parentElement.style.borderRadius = "70px";
+form.parentElement.style.padding = "20px";
 
-body.style.fontFamily ="consolas"
-form.parentElement.style.border= "3px solid #9882ac"
-form.parentElement.style.borderRadius = "10px"
-form.parentElement.style.padding= "20px"
+body.style.border = " 2px solid black";
+body.style.borderRadius = "70px"
+body.style.boxShadow = "-10px 10px 10px #0C0910"
+body.style.maxWidth = " 100%"
 
-
-
-//center everything somehow ... did this in css 
-//check requirements
-//see about centering cool button ( may cause issues )  its centeres but i want to give it a id and make it bigger and with a little more margin!
+let heart = document.getElementById('heart')
+heart.style.border = "1px solid black"
+heart.style.borderRadius = "70px"
+heart.style.boxShadow = "-5px 5px 10px #0C0910"
