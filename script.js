@@ -96,7 +96,8 @@ button.setAttribute("type", "submit");
 button.addEventListener("click", function (event) {
   //event.preventDefault(); // DONT PUT THIS ON THE BUTTON PUT IT ON THE FORM ITSELF
   button.style.backgroundColor = "#453750";
-  button.style.border = "3px solid yellow";
+  button.style.border = "3px solid  pink";
+ 
   alert("checking submission. Darling one sec...");
  
   setTimeout(()=>{
@@ -183,9 +184,12 @@ labels.forEach(function(label){
 })
 
 body.style.fontFamily ="consolas"
+form.parentElement.style.border= "3px solid #9882ac"
+form.parentElement.style.borderRadius = "10px"
+form.parentElement.style.padding= "20px"
 
 
 
-//center everything somehow 
+//center everything somehow ... did this in css 
 //check requirements
-//see about sentering cool button ( may cause issues ) 
+//see about centering cool button ( may cause issues )  its centeres but i want to give it a id and make it bigger and with a little more margin!

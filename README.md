@@ -8,7 +8,7 @@ this project was made using mostly DOM manipulation along with some CSS styling 
 
 HOW TO USE THE WEBPAGE:
  first, read the page. then fill out the required information. if you leave any info out, the page will tell you to enter it because it uses FROM VALIDATION...    
- ( UPDATE if you make the form request any info from you after not following instructions, you have 1 minute to fix your errors... that is more than enough time I think.)
+ ( UPDATE: if you make the form request any info from you after NOT following instructions, you have 1 minute to fix your errors... that is more than enough time I think. There is a slight quirk with the page where within that minute after the message is generated, you can duplicate multiples of that same message until the button times out... beginner struggles... )
  
  anyways, click the submit button and read a "Mad libs" style message thats really sweet and uplifting. After you read, have fun with the color changing, affirmation click button until you get tired... Enjoy!
 
